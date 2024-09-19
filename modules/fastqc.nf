@@ -13,12 +13,12 @@ process FASTQC {
     output:
     tuple val(meta), path("*.html"), emit: html
     tuple val(meta), path("*.zip") , emit: zip
-    path  "versions.yml"           , emit: versions
+    path("*{html,zip}"), emit: all
 
     script:
     """
-    fastqc \\
-    --threads $task.cpus
-    ${reads}
+    mkdir -p .cache
+    export XDG_CACHE_HOME=`pwd`/.cache
+    fastqc --threads $task.cpus ${reads}
     """
 }
