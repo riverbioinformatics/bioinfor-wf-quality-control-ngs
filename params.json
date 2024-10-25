@@ -10,7 +10,7 @@
             "key": "output_folder",
             "is_storage": true,
             "is_required": true,
-            "help": "The inputs folder which contains the fastq files, may have another files but takes all"
+            "help": "The output directory"
         }
     ]
 }
