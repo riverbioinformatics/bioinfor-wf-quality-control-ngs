@@ -1,21 +1,16 @@
 {
-    "workflow": "Quality control workflow",
-    "version": "0.0.1",
-    "author": "Giang (River) Nguyen, nttg8100@gmail.com",
-    "description": "This is a workflow to run the pipeline for simple quality control fastq files",
-    "args": [
+    "params": [
         {
-            "name": "common",
-            "help": "Common paramters",
-            "params": [
-                {
-                    "name": "fastqs_dir",
-                    "type": "folder",
-                    "required": true,
-                    "help": "The inputs folder which contains the fastq files, may have another files but takes all"
-                }
-            ]
+            "key": "fastqs_dir",
+            "is_storage": true,
+            "is_required": true,
+            "help": "The inputs folder which contains the fastq files, may have another files but takes all"
+        },
+        {
+            "key": "output_folder",
+            "is_storage": true,
+            "is_required": true,
+            "help": "The inputs folder which contains the fastq files, may have another files but takes all"
         }
     ]
-
 }
