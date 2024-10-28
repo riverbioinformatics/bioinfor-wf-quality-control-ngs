@@ -1,4 +1,5 @@
-nextflow $RIVER_HOME/.workflow/river-quality-control-ngs \
-    run main.nf \
+nextflow run river-quality-control-ngs \
     -profile singularity \
-    --reads "<<fastqs_dir>>/*R{1,2}.fq"
+    --reads "workspace/<<fastqs_dir>>/*R{1,2}.fq"
+    -workDir "workspace/work" \
+    --outdir "workspace/<<uuid_job_id>>/results"
