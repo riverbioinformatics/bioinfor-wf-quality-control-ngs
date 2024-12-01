@@ -1,4 +1,4 @@
 nextflow \
     run main.nf \
-    -profile docker \
-    --reads "data/*R{1,2}.fq"
+    -profile singularity \
+    --reads "data/*{1,2}.fq"
