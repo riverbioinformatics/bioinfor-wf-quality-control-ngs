@@ -1,6 +1,4 @@
-process MULTIQC {
-    label 'process_single'
-
+process MULTIQC {    
     conda "${moduleDir}/environment.yml"
     container "multiqc/multiqc:v1.25.2"
 

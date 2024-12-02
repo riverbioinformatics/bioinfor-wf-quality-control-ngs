@@ -1,7 +1,6 @@
 process FASTQC {
     tag "$meta"
-    label 'process_single'
-
+    
     conda "${moduleDir}/environment.yml"
     container "biocontainers/fastqc:v0.11.9_cv8"
 
